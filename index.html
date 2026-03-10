@@ -354,7 +354,8 @@
     @keyframes fadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:none; } }
     @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
     .reveal { opacity:0; transform:translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
-    .reveal.visible { opacity:1; transform:none; }
+    .reveal.visible { opacity:1 !important; transform:none !important; }
+    .no-js .reveal, .reveal.visible { opacity:1; transform:none; }
     .d1 { transition-delay:0.1s; }
     .d2 { transition-delay:0.2s; }
     .d3 { transition-delay:0.3s; }
@@ -636,16 +637,33 @@
     <span>Hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a></span>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // Scroll reveal
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  <script>
+    // Mark all reveal elements visible immediately if already in viewport,
+    // then watch for the rest as user scrolls.
+    function revealAll() {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }
 
-    // Active nav
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          document.querySelectorAll('.nav-links a').forEach(a => a.style.color = '');
-          const a = document.querySelector(`
+    function setupReveal() {
+      const els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+
+      // If IntersectionObserver not supported, show everything
+      if (!('IntersectionObserver' in window)) { revealAll(); return; }
+
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+      }, { threshold: 0.01, rootMargin: '0px 0px -20px 0px' });
+
+      els.forEach(el => obs.observe(el));
+
+      // Nuclear fallback: after 1.5s, show anything still hidden
+      setTimeout(() => { els.forEach(el => el.classList.add('visible')); }, 1500);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupReveal);
+    } else {
+      setupReveal();
+    }
+  </script>
