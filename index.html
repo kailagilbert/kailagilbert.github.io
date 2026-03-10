@@ -296,7 +296,15 @@
     .plink { font-size: 0.72rem; font-weight: 500; color: var(--ink3); text-decoration: none; display: flex; align-items: center; gap: 0.3rem; transition: color 0.2s; }
     .plink:hover { color: var(--terra); }
 
-    /* EDUCATION */
+    /* About headshot */
+    .ahs {
+      width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top;
+      border-radius: 4px;
+      border: 1.5px solid var(--cream3);
+      box-shadow: 8px 14px 40px rgba(42,33,24,0.13);
+      margin-bottom: 2rem;
+      display: block;
+    }
     .edu-bg { background: var(--cream2); }
     .tl { position: relative; padding-left: 2.5rem; }
     .tl::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 0; width: 1.5px; background: var(--cream3); }
@@ -389,7 +397,7 @@
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">See My Work →</a>
-        <a href="resume.pdf" class="btn btn-ghost" target="_blank">Download CV</a>
+        <a href="docs/resume.pdf" class="btn btn-ghost" target="_blank">Download CV</a>
       </div>
     </div>
 
@@ -441,9 +449,10 @@
           <p>Before grad school, [add your background here — where you studied, what brought you to data science, any relevant experience]. Outside of work, I [something personal — this humanizes your portfolio!].</p>
           <p>I'm currently <strong>open to part-time and consulting opportunities</strong> in data science, analytics, and visualization. If you have a dataset that needs to tell a story, let's make it happen.</p>
           <br/>
-          <a href="resume.pdf" class="btn btn-ghost" target="_blank">Download Resume →</a>
+          <a href="docs/resume.pdf" class="btn btn-ghost" target="_blank">Download Resume →</a>
         </div>
         <div class="sc reveal d2">
+          <img src="images/headshot.png" alt="Kaila Gilbert" class="ahs">
           <div><div class="sgl">Data Analysis</div><div class="tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">SQL</span><span class="tag">Pandas</span><span class="tag">NumPy</span></div></div>
           <div><div class="sgl">Visualization</div><div class="tags"><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Plotly</span><span class="tag">Tableau</span><span class="tag">D3.js</span><span class="tag">ggplot2</span></div></div>
           <div><div class="sgl">Machine Learning</div><div class="tags"><span class="tag">scikit-learn</span><span class="tag">PyTorch</span><span class="tag">XGBoost</span><span class="tag">HuggingFace</span></div></div>
@@ -463,7 +472,7 @@
         <!-- FEATURED -->
         <div class="pc reveal">
           <div class="pi" style="height:240px;">
-            <img src="epa-project.png" alt="Map of hazardous waste facilities across New York State" style="width:100%;height:100%;object-fit:cover;">
+            <img src="images/epa-project.png" alt="Map of hazardous waste facilities across New York State" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="pb">
             <div class="ptags">
@@ -488,8 +497,8 @@
             </div>
             <div class="plinks">
               <a href="https://github.com/dssg/mlpolicylab_sp20_e2" class="plink" target="_blank">↗ GitHub</a>
-              <a href="epa-report.pdf" class="plink" target="_blank">↗ Final Report</a>
-              <a href="epa-slides.pptx" class="plink" target="_blank">↗ Slides</a>
+              <a href="docs/epa-report.pdf" class="plink" target="_blank">↗ Final Report</a>
+              <a href="docs/epa-slides.pptx" class="plink" target="_blank">↗ Slides</a>
             </div>
           </div>
         </div>
@@ -497,7 +506,7 @@
         <!-- Project 2 -->
         <div class="pc reveal d1">
           <div class="pi">
-            <img src="doj-project.png" alt="Topic frequency trends across DOJ press releases 2009-2019">
+            <img src="images/doj-project.png" alt="Topic frequency trends across DOJ press releases 2009-2019">
           </div>
           <div class="pb">
             <div class="ptags">
@@ -511,7 +520,7 @@
             <div class="pmeta">Corpus: <span>13,000 press releases · 57MB</span> &nbsp;·&nbsp; Topics: <span>10 discovered</span></div>
             <div class="plinks">
               <a href="#" class="plink">↗ GitHub (coming soon)</a>
-              <a href="doj-slides.pptx" class="plink" target="_blank">↗ Slides</a>
+              <a href="docs/doj-slides.pptx" class="plink" target="_blank">↗ Slides</a>
             </div>
           </div>
         </div>
@@ -613,7 +622,7 @@
           <a href="/cdn-cgi/l/email-protection#453c2a3037052028242c296b262a28" class="cc"><div><div class="ccl">Email</div><div class="ccv"><span class="__cf_email__" data-cfemail="0d7462787f4d68606c6461236e6260">[email&#160;protected]</span></div></div><span class="cca">→</span></a>
           <a href="https://linkedin.com/in/kailagilbert" class="cc" target="_blank"><div><div class="ccl">LinkedIn</div><div class="ccv">linkedin.com/in/kailagilbert</div></div><span class="cca">→</span></a>
           <a href="https://github.com/kailagilbert" class="cc" target="_blank"><div><div class="ccl">GitHub</div><div class="ccv">github.com/kailagilbert</div></div><span class="cca">→</span></a>
-          <a href="resume.pdf" class="cc" target="_blank"><div><div class="ccl">Resume</div><div class="ccv">Download PDF</div></div><span class="cca">↓</span></a>
+          <a href="docs/resume.pdf" class="cc" target="_blank"><div><div class="ccl">Resume</div><div class="ccv">Download PDF</div></div><span class="cca">↓</span></a>
         </div>
       </div>
     </div>
