@@ -561,12 +561,24 @@
 
         <!-- Project 4 -->
         <div class="pc reveal d1">
-          <div class="pi" style="height:220px;"><span class="pi-ph">[ Image ]</span></div>
+          <div class="pi" style="height:260px; background:#f5f5f5;">
+            <img src="images/food-inspection.png" alt="Feature importance chart for food inspection outcome prediction" style="width:100%;height:100%;object-fit:contain;">
+          </div>
           <div class="pb">
-            <div class="ptags"><span class="ptag t">Interactive Dashboard</span><span class="ptag">Plotly</span><span class="ptag">Streamlit</span></div>
-            <h3 class="ptitle">Project Four Title</h3>
-            <p class="pdesc">Did you build an interactive dashboard? Describe what it visualizes, who uses it, and what decisions it supports.</p>
-            <div class="plinks"><a href="#" class="plink">↗ GitHub</a><a href="#" class="plink">↗ Live App</a></div>
+            <div class="ptags">
+              <span class="ptag t">Rare Events</span>
+              <span class="ptag s">R</span>
+              <span class="ptag">SMOTE</span>
+              <span class="ptag">Random Forest</span>
+            </div>
+            <h3 class="ptitle">Predicting Food Inspection Outcomes in Allegheny County</h3>
+            <p class="pdesc">Tackled a classic applied ML challenge — limited data and severe class imbalance — to predict food safety inspection failures across Allegheny County, PA. Evaluated how standard classifiers degrade under rare-event conditions and applied SMOTE (Synthetic Minority Oversampling) to rebalance the training data.</p>
+            <p class="pdesc" style="margin-top:-0.5rem;">Compared logistic regression, KNN, and random forest models with and without SMOTE correction. Feature importance analysis revealed that location (city), business expenses, and inspection description were the strongest predictors — outweighing prior violation history.</p>
+            <div class="pmeta">Focus: <span>Class imbalance · Rare event modeling</span> &nbsp;·&nbsp; Tools: <span>R · SMOTE · Random Forest</span></div>
+            <div class="plinks">
+              <a href="https://github.com/kailagilbert/FoodInspectionOutcomes" class="plink" target="_blank">↗ GitHub</a>
+              <a href="https://github.com/kailagilbert/FoodInspectionOutcomes/blob/master/Gilbert_and_Samach_AAMLPFinalProject%20(1).pdf" class="plink" target="_blank">↗ Report</a>
+            </div>
           </div>
         </div>
 
