@@ -538,12 +538,24 @@
 
         <!-- Project 3 -->
         <div class="pc reveal">
-          <div class="pi"><span class="pi-ph">[ Image ]</span></div>
+          <div class="pi">
+            <img src="images/compas-project.png" alt="ProPublica Machine Bias — COMPAS racial bias investigation">
+          </div>
           <div class="pb">
-            <div class="ptags"><span class="ptag g">NLP</span><span class="ptag">Text Analysis</span></div>
-            <h3 class="ptitle">Project Three Title</h3>
-            <p class="pdesc">What was the challenge, how did you approach it, what did the data reveal?</p>
-            <div class="plinks"><a href="#" class="plink">↗ GitHub</a><a href="#" class="plink">↗ Slides</a></div>
+            <div class="ptags">
+              <span class="ptag t">Algorithmic Fairness</span>
+              <span class="ptag s">R</span>
+              <span class="ptag">Criminal Justice</span>
+              <span class="ptag g">Group Project</span>
+            </div>
+            <h3 class="ptitle">Evaluating Racial Bias in the COMPAS Recidivism Risk System</h3>
+            <p class="pdesc">Reproduced and extended ProPublica's landmark investigation into COMPAS — a risk assessment tool used across the U.S. criminal justice system to score individuals' likelihood of reoffending. Using the same Broward County dataset, we built competing models (logistic regression, LDA, KNN, decision trees) to predict both general and violent recidivism.</p>
+            <p class="pdesc" style="margin-top:-0.5rem;">Our models achieved similar sensitivity to COMPAS with meaningfully better specificity — and with substantially more equitable outcomes across race. Key finding: the strongest predictors of recidivism were age, sex, and prior criminal history, not race — yet COMPAS scores diverged sharply by race. A pruned random forest performed best for general recidivism; LDA led on violent recidivism.</p>
+            <div class="pmeta">Dataset: <span>6,172 individuals · Broward County, FL</span> &nbsp;·&nbsp; Models: <span>LR, LDA, KNN, Decision Tree, Random Forest</span></div>
+            <div class="plinks">
+              <a href="https://github.com/kailagilbert/ProPublica---Recidivism-Risk-Modeling/tree/main" class="plink" target="_blank">↗ GitHub</a>
+              <a href="docs/compas-report.html" class="plink" target="_blank">↗ Full Report</a>
+            </div>
           </div>
         </div>
 
@@ -630,7 +642,7 @@
           <p class="cnote">I'm available for part-time, freelance, and consulting work in data science, analytics, and visualization. Whether it's a short project or an ongoing collaboration — I'd love to hear about it.</p>
         </div>
         <div class="ccs reveal d2">
-          <a href="mailto:kailagilbert@gmail.com" class="cc"><div><div class="ccl">Email</div><div class="ccv">kailagilbert@gmail.com</div></div><span class="cca">→</span></a>
+          <a href="/cdn-cgi/l/email-protection#cba0aaa2a7aaaca2a7a9aeb9bf8baca6aaa2a7e5a8a4a6" class="cc"><div><div class="ccl">Email</div><div class="ccv"><span class="__cf_email__" data-cfemail="7c171d15101d1b15101e190e083c1b111d1510521f1311">[email&#160;protected]</span></div></div><span class="cca">→</span></a>
           <a href="https://linkedin.com/in/kailagilbert" class="cc" target="_blank"><div><div class="ccl">LinkedIn</div><div class="ccv">linkedin.com/in/kailagilbert</div></div><span class="cca">→</span></a>
           <a href="https://github.com/kailagilbert" class="cc" target="_blank"><div><div class="ccl">GitHub</div><div class="ccv">github.com/kailagilbert</div></div><span class="cca">→</span></a>
           <a href="docs/resume.pdf" class="cc" target="_blank"><div><div class="ccl">Resume</div><div class="ccv">Download PDF</div></div><span class="cca">↓</span></a>
@@ -646,7 +658,7 @@
     <span>Hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a></span>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function setupReveal() {
       const els = document.querySelectorAll('.reveal');
       if (!els.length) return;
@@ -667,13 +679,4 @@
 
       els.forEach(el => obs.observe(el));
 
-      // Absolute fallback: force everything visible after 2s
-      setTimeout(() => els.forEach(el => el.classList.add('visible')), 2000);
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', setupReveal);
-    } else {
-      setupReveal();
-    }
-  </script>
+      // Absolute fallback: force everything visible after 2
