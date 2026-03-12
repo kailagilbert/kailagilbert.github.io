@@ -261,22 +261,11 @@
 
     /* PROJECTS */
     .projects-bg { background: var(--cream); }
-    .masonry {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 1.8rem;
-      align-items: start;
-    }
-    .masonry .pc:nth-child(odd)  { grid-column: 1; }
-    .masonry .pc:nth-child(even) { grid-column: 2; }
-    @media (max-width: 780px) {
-      .masonry { grid-template-columns: 1fr; }
-      .masonry .pc:nth-child(odd),
-      .masonry .pc:nth-child(even) { grid-column: 1; }
-    }
+    .masonry { columns: 2; column-gap: 1.8rem; }
+    @media (max-width: 780px) { .masonry { columns: 1; } }
 
     .pc {
-      margin-bottom: 0;
+      break-inside: avoid; margin-bottom: 1.8rem;
       background: var(--cream2); border: 1px solid var(--cream3);
       overflow: hidden; position: relative;
       transition: transform 0.3s, box-shadow 0.3s;
