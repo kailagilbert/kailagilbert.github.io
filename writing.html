@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Writing — Kaila Gilbert</title>
+  <meta name="description" content="Academic writing samples by Kaila Gilbert — data science, public policy, algorithmic fairness, and social research.">
+  <meta name="author" content="Kaila Gilbert">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kailagilbert.github.io/writing.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream:    #faf6ef;
+      --cream2:   #f2ebe0;
+      --cream3:   #e8ddd0;
+      --terra:    #c4612a;
+      --terra2:   #e07a4a;
+      --terra-lt: #f0c4a8;
+      --sage:     #5c7a5e;
+      --sage-lt:  #a8c5aa;
+      --ink:      #2a2118;
+      --ink2:     #4a3d30;
+      --ink3:     #7a6a58;
+      --gold:     #c9a84c;
+      --border:   rgba(42,33,24,0.12);
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'DM Sans', sans-serif;
+      --font-mono:    'DM Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+    }
+
+    /* Paper texture */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 900;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 400;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.4rem 3.5rem;
+      background: rgba(250,246,239,0.9);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-style: italic; font-size: 1.2rem;
+      color: var(--terra); text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.8rem; font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--ink3); text-decoration: none;
+      position: relative; transition: color 0.2s;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -3px; left: 0;
+      width: 0; height: 1.5px; background: var(--terra);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover { color: var(--terra); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a.active { color: var(--terra); }
+    .nav-links a.active::after { width: 100%; }
+
+    /* PAGE HERO */
+    .page-hero {
+      padding: 10rem 3.5rem 5rem;
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero-blob {
+      position: absolute;
+      border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+      background: radial-gradient(ellipse at 40% 40%, var(--terra-lt) 0%, transparent 70%);
+      width: 500px; height: 500px;
+      right: -80px; top: -80px;
+      opacity: 0.3; z-index: 0;
+      animation: morphBlob 14s ease-in-out infinite;
+    }
+    @keyframes morphBlob {
+      0%,100% { border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%; }
+      33%      { border-radius: 40% 60% 30% 70% / 60% 40% 60% 40%; }
+      66%      { border-radius: 70% 30% 50% 50% / 30% 70% 50% 50%; }
+    }
+    .page-hero-inner { position: relative; z-index: 1; max-width: 720px; }
+    .page-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.7rem;
+      font-family: var(--font-mono); font-size: 0.68rem;
+      color: var(--terra); letter-spacing: 0.14em; text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+    .page-eyebrow::before { content: ''; width: 28px; height: 1.5px; background: var(--terra); }
+    .page-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 900; line-height: 0.97;
+      letter-spacing: -0.02em; margin-bottom: 1.2rem;
+    }
+    .page-title em { font-style: italic; color: var(--terra); display: block; }
+    .page-intro {
+      font-size: 0.95rem; line-height: 1.95; color: var(--ink2);
+      max-width: 580px;
+    }
+
+    /* FILTER BAR */
+    .filter-bar {
+      background: var(--cream2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 3.5rem;
+      display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;
+    }
+    .filter-label {
+      font-family: var(--font-mono); font-size: 0.6rem;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--ink3); margin-right: 0.4rem;
+    }
+    .filter-btn {
+      font-family: var(--font-mono); font-size: 0.6rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.35rem 0.9rem; border-radius: 100px;
+      border: 1px solid var(--cream3);
+      background: var(--cream); color: var(--ink3);
+      cursor: pointer; transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--terra); border-color: var(--terra); color: var(--cream);
+    }
+
+    /* WRITING GRID */
+    .writing-bg { background: var(--cream); }
+    .sw { padding: 5rem 3.5rem; max-width: 1200px; margin: 0 auto; }
+    .writing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.8rem;
+    }
+
+    /* WRITING CARD */
+    .wc {
+      background: var(--cream2);
+      border: 1px solid var(--cream3);
+      position: relative; overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex; flex-direction: column;
+    }
+    .wc:hover { transform: translateY(-5px); box-shadow: 0 18px 50px rgba(42,33,24,0.12); }
+    .wc::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: var(--terra); z-index: 1;
+    }
+    .wc:nth-child(3n+2)::before { background: var(--sage); }
+    .wc:nth-child(3n+3)::before { background: var(--gold); }
+
+    /* Number accent */
+    .wc-num {
+      font-family: var(--font-display);
+      font-size: 4.5rem; font-weight: 900; font-style: italic;
+      color: var(--cream3); line-height: 1;
+      position: absolute; top: 1rem; right: 1.4rem;
+      pointer-events: none; user-select: none;
+      transition: color 0.3s;
+    }
+    .wc:hover .wc-num { color: var(--terra-lt); }
+
+    .wc-body { padding: 2rem 2rem 1.8rem; flex: 1; display: flex; flex-direction: column; }
+    .wc-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .wc-tag {
+      font-family: var(--font-mono); font-size: 0.57rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.2rem 0.6rem; border-radius: 100px;
+      background: var(--cream); border: 1px solid var(--cream3); color: var(--ink3);
+    }
+    .wc-tag.t { background: rgba(196,97,42,0.1); color: var(--terra); border-color: var(--terra-lt); }
+    .wc-tag.s { background: rgba(92,122,94,0.1); color: var(--sage); border-color: var(--sage-lt); }
+    .wc-tag.g { background: rgba(201,168,76,0.1); color: #957518; border-color: #d4b560; }
+
+    .wc-title {
+      font-family: var(--font-display); font-size: 1.15rem;
+      font-weight: 700; line-height: 1.35; color: var(--ink);
+      margin-bottom: 0.8rem;
+    }
+    .wc-desc {
+      font-size: 0.82rem; line-height: 1.85; color: var(--ink2);
+      margin-bottom: 1.2rem; flex: 1;
+    }
+    .wc-meta {
+      font-family: var(--font-mono); font-size: 0.6rem;
+      color: var(--terra); margin-bottom: 1.2rem;
+      letter-spacing: 0.05em;
+    }
+    .wc-meta span { color: var(--ink3); }
+    .wc-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: auto; }
+    .wc-link {
+      font-size: 0.72rem; font-weight: 500;
+      color: var(--ink3); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      transition: color 0.2s;
+    }
+    .wc-link:hover { color: var(--terra); }
+
+    /* PLACEHOLDER CARD */
+    .wc-placeholder {
+      border: 1.5px dashed var(--cream3);
+      background: transparent;
+    }
+    .wc-placeholder::before { display: none; }
+    .wc-placeholder .wc-body {
+      align-items: center; justify-content: center;
+      text-align: center; padding: 3rem 2rem;
+    }
+    .wc-placeholder .wc-num { display: none; }
+    .wc-ph-icon {
+      font-size: 1.8rem; margin-bottom: 1rem; opacity: 0.25;
+    }
+    .wc-ph-label {
+      font-family: var(--font-mono); font-size: 0.6rem;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--ink3); opacity: 0.5;
+    }
+
+    /* CALLOUT BANNER */
+    .callout {
+      background: var(--ink);
+      padding: 3.5rem 3.5rem;
+      text-align: center;
+    }
+    .callout p {
+      font-family: var(--font-display); font-style: italic;
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      color: var(--cream); max-width: 680px; margin: 0 auto 1.8rem;
+      line-height: 1.6;
+    }
+    .callout p em { color: var(--terra2); font-style: normal; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      padding: 0.9rem 2rem;
+      font-family: var(--font-body); font-size: 0.82rem; font-weight: 500;
+      text-decoration: none; border: 1.5px solid; transition: all 0.25s;
+    }
+    .btn-ghost-light { color: var(--cream); border-color: rgba(250,246,239,0.3); }
+    .btn-ghost-light:hover { border-color: var(--terra2); color: var(--terra2); }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink); border-top: 1px solid rgba(250,246,239,0.07);
+      padding: 1.8rem 3.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: var(--font-mono); font-size: 0.62rem;
+      color: rgba(250,246,239,0.3); letter-spacing: 0.06em;
+    }
+    footer a { color: var(--terra2); text-decoration: none; }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:none; } }
+    .reveal { opacity:1; transform:none; transition: opacity 0.75s ease, transform 0.75s ease; }
+    .js-reveal { opacity:0; transform:translateY(28px); }
+    .js-reveal.visible { opacity:1 !important; transform:none !important; }
+    .d1 { transition-delay: 0.08s; }
+    .d2 { transition-delay: 0.16s; }
+    .d3 { transition-delay: 0.24s; }
+    .d4 { transition-delay: 0.32s; }
+    .d5 { transition-delay: 0.40s; }
+    .d6 { transition-delay: 0.48s; }
+
+    .hero-eyebrow-anim {
+      opacity: 0; animation: fadeUp 0.9s 0.1s forwards;
+    }
+    .hero-title-anim {
+      opacity: 0; animation: fadeUp 0.9s 0.25s forwards;
+    }
+    .hero-intro-anim {
+      opacity: 0; animation: fadeUp 0.9s 0.4s forwards;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .nav-links { gap: 1.5rem; }
+      .page-hero { padding: 8rem 1.5rem 4rem; }
+      .filter-bar { padding: 1rem 1.5rem; }
+      .sw { padding: 3.5rem 1.5rem; }
+      .writing-grid { grid-template-columns: 1fr; }
+      .callout { padding: 2.5rem 1.5rem; }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">Kaila Gilbert</a>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#projects">Projects</a></li>
+      <li><a href="/#education">Education</a></li>
+      <li><a href="writing.html" class="active">Writing</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-blob"></div>
+    <div class="page-hero-inner">
+      <p class="page-eyebrow hero-eyebrow-anim">Academic Writing</p>
+      <h1 class="page-title hero-title-anim">Words &<em>evidence.</em></h1>
+      <p class="page-intro hero-intro-anim">
+        Good data science isn't just about models — it's about communicating findings clearly, situating work in broader context, and making arguments that hold up to scrutiny. These writing samples span policy analysis, statistical methods, algorithmic fairness, and social research.
+      </p>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <span class="filter-label">Filter by —</span>
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="policy">Public Policy</button>
+    <button class="filter-btn" data-filter="methods">Methods</button>
+    <button class="filter-btn" data-filter="fairness">Algorithmic Fairness</button>
+    <button class="filter-btn" data-filter="social">Social Research</button>
+  </div>
+
+  <!-- WRITING SAMPLES -->
+  <div class="writing-bg">
+    <div class="sw">
+      <div class="writing-grid">
+
+        <!-- Sample 1 -->
+        <div class="wc reveal" data-category="policy">
+          <span class="wc-num">01</span>
+          <div class="wc-body">
+            <div class="wc-tags">
+              <span class="wc-tag t">Public Policy</span>
+              <span class="wc-tag">Data Analysis</span>
+            </div>
+            <h2 class="wc-title">Writing Sample Title One</h2>
+            <p class="wc-desc">Brief description of the paper — what question it asks, what argument it makes, and what evidence or methods it draws on. 2–3 sentences is ideal.</p>
+            <div class="wc-meta">Course / Publication &nbsp;·&nbsp; <span>Year</span></div>
+            <div class="wc-links">
+              <a href="#" class="wc-link">↗ Read Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample 2 -->
+        <div class="wc reveal d1" data-category="fairness">
+          <span class="wc-num">02</span>
+          <div class="wc-body">
+            <div class="wc-tags">
+              <span class="wc-tag s">Algorithmic Fairness</span>
+              <span class="wc-tag">Criminal Justice</span>
+            </div>
+            <h2 class="wc-title">Writing Sample Title Two</h2>
+            <p class="wc-desc">Brief description of the paper — what question it asks, what argument it makes, and what evidence or methods it draws on. 2–3 sentences is ideal.</p>
+            <div class="wc-meta">Course / Publication &nbsp;·&nbsp; <span>Year</span></div>
+            <div class="wc-links">
+              <a href="#" class="wc-link">↗ Read Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample 3 -->
+        <div class="wc reveal d2" data-category="methods">
+          <span class="wc-num">03</span>
+          <div class="wc-body">
+            <div class="wc-tags">
+              <span class="wc-tag g">Methods</span>
+              <span class="wc-tag">Statistics</span>
+            </div>
+            <h2 class="wc-title">Writing Sample Title Three</h2>
+            <p class="wc-desc">Brief description of the paper — what question it asks, what argument it makes, and what evidence or methods it draws on. 2–3 sentences is ideal.</p>
+            <div class="wc-meta">Course / Publication &nbsp;·&nbsp; <span>Year</span></div>
+            <div class="wc-links">
+              <a href="#" class="wc-link">↗ Read Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample 4 -->
+        <div class="wc reveal d3" data-category="social">
+          <span class="wc-num">04</span>
+          <div class="wc-body">
+            <div class="wc-tags">
+              <span class="wc-tag t">Social Research</span>
+              <span class="wc-tag">Survey Methods</span>
+            </div>
+            <h2 class="wc-title">Writing Sample Title Four</h2>
+            <p class="wc-desc">Brief description of the paper — what question it asks, what argument it makes, and what evidence or methods it draws on. 2–3 sentences is ideal.</p>
+            <div class="wc-meta">Course / Publication &nbsp;·&nbsp; <span>Year</span></div>
+            <div class="wc-links">
+              <a href="#" class="wc-link">↗ Read Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample 5 -->
+        <div class="wc reveal d4" data-category="policy">
+          <span class="wc-num">05</span>
+          <div class="wc-body">
+            <div class="wc-tags">
+              <span class="wc-tag s">Public Policy</span>
+              <span class="wc-tag">Transportation</span>
+            </div>
+            <h2 class="wc-title">Writing Sample Title Five</h2>
+            <p class="wc-desc">Brief description of the paper — what question it asks, what argument it makes, and what evidence or methods it draws on. 2–3 sentences is ideal.</p>
+            <div class="wc-meta">Course / Publication &nbsp;·&nbsp; <span>Year</span></div>
+            <div class="wc-links">
+              <a href="#" class="wc-link">↗ Read Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample 6 -->
+        <div class="wc reveal d5" data-category="methods">
+          <span class="wc-num">06</span>
+          <div class="wc-body">
+            <div class="wc-tags">
+              <span class="wc-tag g">Methods</span>
+              <span class="wc-tag">Machine Learning</span>
+            </div>
+            <h2 class="wc-title">Writing Sample Title Six</h2>
+            <p class="wc-desc">Brief description of the paper — what question it asks, what argument it makes, and what evidence or methods it draws on. 2–3 sentences is ideal.</p>
+            <div class="wc-meta">Course / Publication &nbsp;·&nbsp; <span>Year</span></div>
+            <div class="wc-links">
+              <a href="#" class="wc-link">↗ Read Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample 7 -->
+        <div class="wc reveal d6" data-category="fairness">
+          <span class="wc-num">07</span>
+          <div class="wc-body">
+            <div class="wc-tags">
+              <span class="wc-tag t">Algorithmic Fairness</span>
+              <span class="wc-tag">NLP</span>
+            </div>
+            <h2 class="wc-title">Writing Sample Title Seven</h2>
+            <p class="wc-desc">Brief description of the paper — what question it asks, what argument it makes, and what evidence or methods it draws on. 2–3 sentences is ideal.</p>
+            <div class="wc-meta">Course / Publication &nbsp;·&nbsp; <span>Year</span></div>
+            <div class="wc-links">
+              <a href="#" class="wc-link">↗ Read Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Placeholder 8 — add more writing here -->
+        <div class="wc wc-placeholder reveal">
+          <div class="wc-body">
+            <div class="wc-ph-icon">✦</div>
+            <p class="wc-ph-label">More coming soon</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CALLOUT -->
+  <div class="callout">
+    <p>"Writing is thinking made <em>visible</em> — and good analysis always has something to say."</p>
+    <a href="/#contact" class="btn btn-ghost-light">Get in touch →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2025 Kaila Gilbert</span>
+    <span>Academic Writing</span>
+    <span><a href="/">← Back to Portfolio</a></span>
+  </footer>
+
+  <script>
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.wc').forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Scroll reveal
+    function setupReveal() {
+      const els = document.querySelectorAll('.reveal');
+      if (!els.length || !('IntersectionObserver' in window)) return;
+      els.forEach(el => el.classList.add('js-reveal'));
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.01, rootMargin: '0px 0px -20px 0px' });
+      els.forEach(el => obs.observe(el));
+      setTimeout(() => els.forEach(el => el.classList.add('visible')), 2000);
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupReveal);
+    } else {
+      setupReveal();
+    }
+  </script>
+
+</body>
+</html>
