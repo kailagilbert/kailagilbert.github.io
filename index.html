@@ -514,8 +514,34 @@
           </div>
         </div>
 
-        <!-- Project 2 -->
+        <!-- Project 2 — FEATURED -->
         <div class="pc reveal d1">
+          <div class="pi" style="height:260px;">
+            <img src="images/transit-dashboard.png" alt="ArcGIS dashboard showing transit accessibility to opportunity employment zones in Allegheny County" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          </div>
+          <div class="pb">
+            <div class="ptags">
+              <span class="ptag t">Featured</span>
+              <span class="ptag s">ArcGIS Dashboard</span>
+              <span class="ptag">Transportation Equity</span>
+              <span class="ptag">GIS</span>
+              <span class="ptag g">Public Policy</span>
+            </div>
+            <h3 class="ptitle">Measuring Transit Accessibility to Opportunity Employment in Allegheny County</h3>
+            <p class="pdesc">Investigated whether the Port Authority of Allegheny County (PAAC) bus system adequately serves "high needs" populations — those who rely on public transit to access opportunity employment. Identified origin block groups using ACS data filtered by transit dependency, age, and industry, then built an origin-destination composite accessibility index scoring each transit route.</p>
+            <p class="pdesc" style="margin-top:-0.5rem;">Composite scores ranged from <strong style="color:var(--terra)">9.8 to 87</strong> — penalizing long travel times, excessive transfers, and limited off-peak service. Findings revealed stark spatial mismatches between where transit-dependent workers live and where opportunity jobs are located. Final outputs were delivered as an interactive ArcGIS dashboard and an Excel accessibility index used by Allegheny County DHS.</p>
+            <div class="pmeta">Geography: <span>Allegheny County, PA · Block group level</span> &nbsp;·&nbsp; Tools: <span>ArcGIS · Python · Excel · ACS Census</span> &nbsp;·&nbsp; Output: <span>Live dashboard + Accessibility Index</span></div>
+            <div class="plinks">
+              <a href="https://github.com/kailagilbert/transit-accessibility-index" class="plink" target="_blank">↗ GitHub</a>
+              <a href="https://github.com/kailagilbert/transit-accessibility-index/blob/main/Final%20Report%20-%20Transit%20Accessibility.pdf" class="plink" target="_blank">↗ Report</a>
+              <a href="https://github.com/kailagilbert/transit-accessibility-index/blob/main/Final%20Presentation.pdf" class="plink" target="_blank">↗ Slides</a>
+              <a href="https://github.com/kailagilbert/transit-accessibility-index/blob/main/(Sample%20Output)%20AccessibilityIndex_DHS_Final(1).xlsx" class="plink" target="_blank">↗ Sample Output</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 (formerly 2) -->
+        <div class="pc reveal">
           <div class="pi">
             <img src="images/doj-project.png" alt="Topic frequency trends across DOJ press releases 2009-2019">
           </div>
@@ -538,29 +564,6 @@
 
         <!-- Project 3 -->
         <div class="pc reveal">
-          <div class="pi" style="height:280px; background:#1a1a1a;">
-            <img src="images/compas-project.png" alt="ProPublica Machine Bias — COMPAS racial bias investigation" style="width:100%;height:100%;object-fit:contain;">
-          </div>
-          <div class="pb">
-            <div class="ptags">
-              <span class="ptag t">Algorithmic Fairness</span>
-              <span class="ptag s">R</span>
-              <span class="ptag">Criminal Justice</span>
-              <span class="ptag g">Group Project</span>
-            </div>
-            <h3 class="ptitle">Evaluating Racial Bias in the COMPAS Recidivism Risk System</h3>
-            <p class="pdesc">Reproduced and extended ProPublica's landmark investigation into COMPAS — a risk assessment tool used across the U.S. criminal justice system to score individuals' likelihood of reoffending. Using the same Broward County dataset, we built competing models (logistic regression, LDA, KNN, decision trees) to predict both general and violent recidivism.</p>
-            <p class="pdesc" style="margin-top:-0.5rem;">Our models achieved similar sensitivity to COMPAS with meaningfully better specificity — and with substantially more equitable outcomes across race. Key finding: the strongest predictors of recidivism were age, sex, and prior criminal history, not race — yet COMPAS scores diverged sharply by race. A pruned random forest performed best for general recidivism; LDA led on violent recidivism.</p>
-            <div class="pmeta">Dataset: <span>6,172 individuals · Broward County, FL</span> &nbsp;·&nbsp; Models: <span>LR, LDA, KNN, Decision Tree, Random Forest</span></div>
-            <div class="plinks">
-              <a href="https://github.com/kailagilbert/ProPublica---Recidivism-Risk-Modeling/tree/main" class="plink" target="_blank">↗ GitHub</a>
-              <a href="docs/compas-report.html" class="plink" target="_blank">↗ Full Report</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="pc reveal d1">
           <div class="pi" style="height:260px; background:#f5f5f5;">
             <img src="images/food-inspection.png" alt="Feature importance chart for food inspection outcome prediction" style="width:100%;height:100%;object-fit:contain;">
           </div>
@@ -582,25 +585,73 @@
           </div>
         </div>
 
+        <!-- Project 4 -->
+        <div class="pc reveal d1">
+          <div class="pi" style="height:280px; background:#1a1a1a;">
+            <img src="images/compas-project.png" alt="ProPublica Machine Bias — COMPAS racial bias investigation" style="width:100%;height:100%;object-fit:contain;">
+          </div>
+          <div class="pb">
+            <div class="ptags">
+              <span class="ptag t">Algorithmic Fairness</span>
+              <span class="ptag s">R</span>
+              <span class="ptag">Criminal Justice</span>
+              <span class="ptag g">Group Project</span>
+            </div>
+            <h3 class="ptitle">Evaluating Racial Bias in the COMPAS Recidivism Risk System</h3>
+            <p class="pdesc">Reproduced and extended ProPublica's landmark investigation into COMPAS — a risk assessment tool used across the U.S. criminal justice system to score individuals' likelihood of reoffending. Using the same Broward County dataset, we built competing models (logistic regression, LDA, KNN, decision trees) to predict both general and violent recidivism.</p>
+            <p class="pdesc" style="margin-top:-0.5rem;">Our models achieved similar sensitivity to COMPAS with meaningfully better specificity — and with substantially more equitable outcomes across race. Key finding: the strongest predictors of recidivism were age, sex, and prior criminal history, not race — yet COMPAS scores diverged sharply by race. A pruned random forest performed best for general recidivism; LDA led on violent recidivism.</p>
+            <div class="pmeta">Dataset: <span>6,172 individuals · Broward County, FL</span> &nbsp;·&nbsp; Models: <span>LR, LDA, KNN, Decision Tree, Random Forest</span></div>
+            <div class="plinks">
+              <a href="https://github.com/kailagilbert/ProPublica---Recidivism-Risk-Modeling/tree/main" class="plink" target="_blank">↗ GitHub</a>
+              <a href="docs/compas-report.html" class="plink" target="_blank">↗ Full Report</a>
+            </div>
+          </div>
+        </div>
+
         <!-- Project 5 -->
         <div class="pc reveal">
-          <div class="pi"><span class="pi-ph">[ Image ]</span></div>
+          <div class="pi" style="height:220px;">
+            <img src="images/covid-modeling.jpg" alt="COVID-19 virus illustration — Points of Dispense modeling" style="width:100%;height:100%;object-fit:cover;object-position:center;">
+          </div>
           <div class="pb">
-            <div class="ptags"><span class="ptag s">Statistical Analysis</span><span class="ptag">R</span></div>
-            <h3 class="ptitle">Project Five Title</h3>
-            <p class="pdesc">Describe your statistical analysis or inference project. What hypothesis were you testing?</p>
-            <div class="plinks"><a href="#" class="plink">↗ GitHub</a><a href="#" class="plink">↗ Report</a></div>
+            <div class="ptags">
+              <span class="ptag t">Optimization</span>
+              <span class="ptag s">Public Health</span>
+              <span class="ptag">Python · Gurobi</span>
+              <span class="ptag g">Group Project</span>
+            </div>
+            <h3 class="ptitle">Identifying Points of Dispense for the COVID-19 Epidemic</h3>
+            <p class="pdesc">Designed and solved a mixed-integer optimization model to strategically site COVID-19 testing Points of Dispense (PODs) across Allegheny County, PA — balancing the cost of opening facilities against the societal cost of travel time and unmet demand. Implemented two formulations: an average-weighted objective and a minimax approach minimizing the worst-case travel distance for any zip code.</p>
+            <p class="pdesc" style="margin-top:-0.5rem;">Used a SIR model to simulate outbreak demand scenarios across 47 candidate sites, incorporating GIS-derived travel distances, ACS census data, and PA health budget constraints. Recommended 18 PODs at a cost of ~$1.5M — with 90% weight to societal cost — ensuring equitable geographic coverage with zero unmet demand across all scenarios.</p>
+            <div class="pmeta">Sites evaluated: <span>47 candidate PODs · Allegheny County</span> &nbsp;·&nbsp; Tools: <span>Python · Gurobi · R · GIS</span> &nbsp;·&nbsp; Outcome: <span>18 PODs · $0 shortage</span></div>
+            <div class="plinks">
+              <a href="https://github.com/kailagilbert/POD-covid-epidemic-modeling" class="plink" target="_blank">↗ GitHub</a>
+              <a href="https://github.com/kailagilbert/POD-covid-epidemic-modeling/blob/main/POD%20Final%20Report.docx" class="plink" target="_blank">↗ Report</a>
+            </div>
           </div>
         </div>
 
         <!-- Project 6 -->
         <div class="pc reveal d1">
-          <div class="pi"><span class="pi-ph">[ Image ]</span></div>
+          <div class="pi" style="height:240px; background:#f0ece6;">
+            <img src="images/police-misconduct.png" alt="Complainants by age and race — Philadelphia police misconduct EDA" style="width:100%;height:100%;object-fit:contain;">
+          </div>
           <div class="pb">
-            <div class="ptags"><span class="ptag g">Clustering</span><span class="ptag">Unsupervised ML</span></div>
-            <h3 class="ptitle">Project Six Title</h3>
-            <p class="pdesc">What patterns did you uncover? What did the segmentation reveal?</p>
-            <div class="plinks"><a href="#" class="plink">↗ GitHub</a></div>
+            <div class="ptags">
+              <span class="ptag t">Public Policy</span>
+              <span class="ptag s">R · ArcGIS</span>
+              <span class="ptag">Clustering</span>
+              <span class="ptag g">Group Project</span>
+            </div>
+            <h3 class="ptitle">Predicting Police Misconduct in Philadelphia, PA</h3>
+            <p class="pdesc">Designed a full data science pipeline — from EDA to modeling to a decision-support dashboard — to help the Philadelphia Mayor's Office identify which police districts should be targeted for intervention and training. Analyzed 1,300–1,800 annual complaints filed with the Philadelphia Police Department between 2015 and 2019.</p>
+            <p class="pdesc" style="margin-top:-0.5rem;">Combined k-means clustering, logistic regression, and random forest models to identify high-risk officers and districts. Conducted spatial hotspot analysis in ArcGIS, revealing Districts 39 and 25 as statistically significant misconduct hotspots at 99% confidence. Proposed a V2 optimization layer to allocate limited training funds across flagged locations.</p>
+            <div class="pmeta">Data: <span>OpenDataPhilly · ACS Census · TIGER Shapefiles</span> &nbsp;·&nbsp; Tools: <span>R · ArcGIS · Tableau · scikit-learn</span></div>
+            <div class="plinks">
+              <a href="https://github.com/kailagilbert/predicting-police-misconduct" class="plink" target="_blank">↗ GitHub</a>
+              <a href="docs/police-misconduct.pdf" class="plink" target="_blank">↗ Slides</a>
+              <a href="https://github.com/kailagilbert/predicting-police-misconduct/blob/main/Police_Misconduct_Proposal.pdf" class="plink" target="_blank">↗ Proposal</a>
+            </div>
           </div>
         </div>
 
