@@ -512,30 +512,28 @@
         </div>
 
         <!-- Project 2 — FEATURED -->
-        <div class="pc reveal d1">
-          <div class="pi" style="height:260px;">
-            <img src="images/transit-dashboard.png" alt="ArcGIS dashboard showing transit accessibility to opportunity employment zones in Allegheny County" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+        <div class="pc reveal">
+          <div class="pi" style="height:260px; background:#f5f5f5;">
+            <img src="images/food-inspection.png" alt="Feature importance chart for food inspection outcome prediction" style="width:100%;height:100%;object-fit:contain;">
           </div>
           <div class="pb">
             <div class="ptags">
-              <span class="ptag t">Featured</span>
-              <span class="ptag s">ArcGIS Dashboard</span>
-              <span class="ptag">Transportation Equity</span>
-              <span class="ptag">GIS</span>
-              <span class="ptag g">Public Policy</span>
+              <span class="ptag t">Rare Events</span>
+              <span class="ptag s">R</span>
+              <span class="ptag">SMOTE</span>
+              <span class="ptag">Random Forest</span>
             </div>
-            <h3 class="ptitle">Measuring Transit Accessibility to Opportunity Employment in Allegheny County <span style="font-size:0.75em;font-weight:400;color:var(--ink3);font-family:var(--font-body);">(Team)</span></h3>
-            <p class="pdesc">Investigated whether the Port Authority of Allegheny County (PAAC) bus system adequately serves "high needs" populations — those who rely on public transit to access opportunity employment. Identified origin block groups using ACS data filtered by transit dependency, age, and industry, then built an origin-destination composite accessibility index scoring each transit route.</p>
-            <p class="pdesc" style="margin-top:-0.5rem;">Composite scores ranged from <strong style="color:var(--terra)">9.8 to 87</strong> — penalizing long travel times, excessive transfers, and limited off-peak service. Findings revealed stark spatial mismatches between where transit-dependent workers live and where opportunity jobs are located. Final outputs were delivered as an interactive ArcGIS dashboard and an Excel accessibility index used by Allegheny County DHS.</p>
-            <div class="pmeta">Geography: <span>Allegheny County, PA · Block group level</span> &nbsp;·&nbsp; Tools: <span>ArcGIS · Python · Excel · ACS Census</span> &nbsp;·&nbsp; Output: <span>Live dashboard + Accessibility Index</span></div>
+            <h3 class="ptitle">Predicting Food Inspection Outcomes in Allegheny County <span style="font-size:0.75em;font-weight:400;color:var(--ink3);font-family:var(--font-body);">(Team)</span></h3>
+            <p class="pdesc">Tackled a classic applied ML challenge — limited data and severe class imbalance — to predict food safety inspection failures across Allegheny County, PA. Evaluated how standard classifiers degrade under rare-event conditions and applied SMOTE (Synthetic Minority Oversampling) to rebalance the training data.</p>
+            <p class="pdesc" style="margin-top:-0.5rem;">Compared logistic regression, KNN, and random forest models with and without SMOTE correction. Feature importance analysis revealed that location (city), business expenses, and inspection description were the strongest predictors — outweighing prior violation history.</p>
+            <div class="pmeta">Focus: <span>Class imbalance · Rare event modeling</span> &nbsp;·&nbsp; Tools: <span>R · SMOTE · Random Forest</span></div>
             <div class="plinks">
-              <a href="https://github.com/kailagilbert/transit-accessibility-index" class="plink" target="_blank">↗ GitHub</a>
-              <a href="https://github.com/kailagilbert/transit-accessibility-index/blob/main/Final%20Report%20-%20Transit%20Accessibility.pdf" class="plink" target="_blank">↗ Report</a>
-              <a href="https://github.com/kailagilbert/transit-accessibility-index/blob/main/Final%20Presentation.pdf" class="plink" target="_blank">↗ Slides</a>
-              <a href="https://github.com/kailagilbert/transit-accessibility-index/blob/main/(Sample%20Output)%20AccessibilityIndex_DHS_Final(1).xlsx" class="plink" target="_blank">↗ Sample Output</a>
+              <a href="https://github.com/kailagilbert/FoodInspectionOutcomes" class="plink" target="_blank">↗ GitHub</a>
+              <a href="https://github.com/kailagilbert/FoodInspectionOutcomes/blob/master/Gilbert_and_Samach_AAMLPFinalProject%20(1).pdf" class="plink" target="_blank">↗ Report</a>
             </div>
           </div>
-        </div>
+        </div>        
+        
 
         <!-- Project 3 — EPA -->
         <div class="pc reveal">
@@ -596,24 +594,27 @@
         </div>
 
         <!-- Project 5 -->
-        <div class="pc reveal">
-          <div class="pi" style="height:260px; background:#f5f5f5;">
-            <img src="images/food-inspection.png" alt="Feature importance chart for food inspection outcome prediction" style="width:100%;height:100%;object-fit:contain;">
+        <div class="pc reveal d1">
+          <div class="pi" style="height:260px;">
+            <img src="images/transit-dashboard.png" alt="ArcGIS dashboard showing transit accessibility to opportunity employment zones in Allegheny County" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
           </div>
           <div class="pb">
             <div class="ptags">
-              <span class="ptag t">Rare Events</span>
-              <span class="ptag s">R</span>
-              <span class="ptag">SMOTE</span>
-              <span class="ptag">Random Forest</span>
+              <span class="ptag t">Featured</span>
+              <span class="ptag s">ArcGIS Dashboard</span>
+              <span class="ptag">Transportation Equity</span>
+              <span class="ptag">GIS</span>
+              <span class="ptag g">Public Policy</span>
             </div>
-            <h3 class="ptitle">Predicting Food Inspection Outcomes in Allegheny County <span style="font-size:0.75em;font-weight:400;color:var(--ink3);font-family:var(--font-body);">(Team)</span></h3>
-            <p class="pdesc">Tackled a classic applied ML challenge — limited data and severe class imbalance — to predict food safety inspection failures across Allegheny County, PA. Evaluated how standard classifiers degrade under rare-event conditions and applied SMOTE (Synthetic Minority Oversampling) to rebalance the training data.</p>
-            <p class="pdesc" style="margin-top:-0.5rem;">Compared logistic regression, KNN, and random forest models with and without SMOTE correction. Feature importance analysis revealed that location (city), business expenses, and inspection description were the strongest predictors — outweighing prior violation history.</p>
-            <div class="pmeta">Focus: <span>Class imbalance · Rare event modeling</span> &nbsp;·&nbsp; Tools: <span>R · SMOTE · Random Forest</span></div>
+            <h3 class="ptitle">Measuring Transit Accessibility to Opportunity Employment in Allegheny County <span style="font-size:0.75em;font-weight:400;color:var(--ink3);font-family:var(--font-body);">(Team)</span></h3>
+            <p class="pdesc">Investigated whether the Port Authority of Allegheny County (PAAC) bus system adequately serves "high needs" populations — those who rely on public transit to access opportunity employment. Identified origin block groups using ACS data filtered by transit dependency, age, and industry, then built an origin-destination composite accessibility index scoring each transit route.</p>
+            <p class="pdesc" style="margin-top:-0.5rem;">Composite scores ranged from <strong style="color:var(--terra)">9.8 to 87</strong> — penalizing long travel times, excessive transfers, and limited off-peak service. Findings revealed stark spatial mismatches between where transit-dependent workers live and where opportunity jobs are located. Final outputs were delivered as an interactive ArcGIS dashboard and an Excel accessibility index used by Allegheny County DHS.</p>
+            <div class="pmeta">Geography: <span>Allegheny County, PA · Block group level</span> &nbsp;·&nbsp; Tools: <span>ArcGIS · Python · Excel · ACS Census</span> &nbsp;·&nbsp; Output: <span>Live dashboard + Accessibility Index</span></div>
             <div class="plinks">
-              <a href="https://github.com/kailagilbert/FoodInspectionOutcomes" class="plink" target="_blank">↗ GitHub</a>
-              <a href="https://github.com/kailagilbert/FoodInspectionOutcomes/blob/master/Gilbert_and_Samach_AAMLPFinalProject%20(1).pdf" class="plink" target="_blank">↗ Report</a>
+              <a href="https://github.com/kailagilbert/transit-accessibility-index" class="plink" target="_blank">↗ GitHub</a>
+              <a href="https://github.com/kailagilbert/transit-accessibility-index/blob/main/Final%20Report%20-%20Transit%20Accessibility.pdf" class="plink" target="_blank">↗ Report</a>
+              <a href="https://github.com/kailagilbert/transit-accessibility-index/blob/main/Final%20Presentation.pdf" class="plink" target="_blank">↗ Slides</a>
+              <a href="https://github.com/kailagilbert/transit-accessibility-index/blob/main/(Sample%20Output)%20AccessibilityIndex_DHS_Final(1).xlsx" class="plink" target="_blank">↗ Sample Output</a>
             </div>
           </div>
         </div>
