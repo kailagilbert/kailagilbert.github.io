@@ -529,7 +529,7 @@
               New York holds 22% of all large quantity hazardous waste generators in the U.S. — yet regulators can only inspect 3% each year. Working with the EPA and NYS Dept. of Environmental Conservation data, our team built a machine learning pipeline to predict which facilities are most likely to violate compliance rules, helping allocate scarce inspection resources more equitably and effectively.
             </p>
             <p class="pdesc" style="margin-top:-0.5rem;">
-              The Nuts and Bolts? We ran a grid of 282 models (Random Forest, KNN, Logistic Regression, AdaBoost) across 193 features drawn from RCRA, NYSDEC waste reports, and Census ACS data. Our best model achieved <strong style="color:var(--terra)">~92% precision at top 3%</strong> — far outperforming the current baseline. We also integrated a full fairness audit on disparities across high-poverty zip codes.
+              <b>The Nuts and Bolts?</b> We ran a grid of 282 models (Random Forest, KNN, Logistic Regression, AdaBoost) across 193 features drawn from RCRA, NYSDEC waste reports, and Census ACS data. Our best model achieved <strong style="color:var(--terra)">~92% precision at top 3%</strong> — far outperforming the current baseline. We also integrated a full fairness audit on disparities across high-poverty zip codes.
             </p>
             <div class="pmeta">
               Models: <span>282</span> &nbsp;·&nbsp;
@@ -635,7 +635,7 @@
             </div>
             <h3 class="ptitle">Evaluating Racial Bias in the COMPAS Recidivism Risk System <span style="font-size:0.75em;font-weight:400;color:var(--ink3);font-family:var(--font-body);">(Team)</span></h3>
             <p class="pdesc"> What happens when an algorithm used by government officials consistently reveals discrimination in its recommendations? Our team reproduced and extended ProPublica's landmark investigation into COMPAS — a risk assessment tool used across the U.S. criminal justice system to score individuals' likelihood of reoffending. Using the same Broward County dataset, we built competing models (logistic regression, LDA, KNN, decision trees) to predict both general and violent recidivism.</p>
-            <p class="pdesc" style="margin-top:-0.5rem;">Our models achieved similar sensitivity to COMPAS with meaningfully better specificity — and with substantially more equitable outcomes across race. Key finding: the strongest predictors of recidivism were age, sex, and prior criminal history, not race — yet COMPAS scores diverged sharply by race. A pruned random forest performed best for general recidivism; LDA led on violent recidivism.</p>
+            <p class="pdesc" style="margin-top:-0.5rem;">Our models achieved similar sensitivity to COMPAS with meaningfully better specificity — and with substantially more equitable outcomes across race. <b>Key finding:</b> The strongest predictors of recidivism were age, sex, and prior criminal history, not race — yet COMPAS scores diverged sharply by race. Our pruned random forest model performed best for general recidivism, while our LDA model led on violent recidivism.</p>
             <div class="pmeta">Dataset: <span>6,172 individuals · Broward County, FL</span> &nbsp;·&nbsp; Models: <span>LR, LDA, KNN, Decision Tree, Random Forest</span></div>
             <div class="plinks">
               <a href="https://github.com/kailagilbert/ProPublica---Recidivism-Risk-Modeling/tree/main" class="plink" target="_blank">↗ GitHub</a>
