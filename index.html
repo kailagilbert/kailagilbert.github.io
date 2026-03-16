@@ -529,7 +529,7 @@
               <b>New York holds 22% of all large quantity hazardous waste generators in the U.S. — yet regulators can only inspect 3% each year.</b> Working with the EPA and NYS Dept. of Environmental Conservation data, our team built a machine learning pipeline to predict which facilities are most likely to violate compliance rules, helping allocate scarce inspection resources more equitably and effectively.
             </p>
             <p class="pdesc" style="margin-top:-0.5rem;">
-              <b>The Nuts and Bolts?</b> We ran a grid of 282 models (Random Forest, KNN, Logistic Regression, AdaBoost) across 193 features drawn from RCRA, NYSDEC waste reports, and Census ACS data. Our best model achieved <strong style="color:var(--terra)">~92% precision at top 3%</strong> — far outperforming the current baseline. We also integrated a full fairness audit on disparities across high-poverty zip codes.
+              <b>Methods:</b> We ran a grid of 282 models (Random Forest, KNN, Logistic Regression, AdaBoost) across 193 features drawn from RCRA, NYSDEC waste reports, and Census ACS data. Our best model achieved <strong style="color:var(--terra)">~92% precision at top 3%</strong> — far outperforming the current baseline. We also integrated a full fairness audit on disparities across high-poverty zip codes.
             </p>
             <div class="pmeta">
               Models: <span>282</span> &nbsp;·&nbsp;
@@ -560,7 +560,7 @@
             </div>
             <h3 class="ptitle">Predicting Food Inspection Outcomes in Allegheny County <span style="font-size:0.75em;font-weight:400;color:var(--ink3);font-family:var(--font-body);">(Team)</span></h3>
             <p class="pdesc"> <b>Which restaurants and shops are most likely to fail food inspection audits? </b> This project tackled a classic applied ML challenge — limited data and severe class imbalance — to predict food safety inspection failures across Allegheny County, PA. This ML project evaluated how standard classifiers degrade under rare-event conditions and applied SMOTE (Synthetic Minority Oversampling) to rebalance the training data.</p>
-            <p class="pdesc" style="margin-top:-0.5rem;"> <b>Key Finding: </b>Our feature importance analyses revealed that location (city), business expenses, and inspection description were the strongest predictors — outweighing prior violation history.</p>
+            <p class="pdesc" style="margin-top:-0.5rem;"> <b>Key Finding: </b>Our analyses revealed that location (city), business expenses, and inspection description were the strongest predictors — outweighing prior violation history.</p>
             <div class="pmeta">Focus: <span>Class imbalance · Rare event modeling</span> &nbsp;·&nbsp; Tools: <span>R · SMOTE · Random Forest</span></div>
             <div class="plinks">
               <a href="https://github.com/kailagilbert/FoodInspectionOutcomes" class="plink" target="_blank">↗ GitHub</a>
@@ -585,7 +585,7 @@
             </div>
             <h3 class="ptitle">Predicting Police Misconduct in Philadelphia, PA <span style="font-size:0.75em;font-weight:400;color:var(--ink3);font-family:var(--font-body);">(Team)</span></h3>
             <p class="pdesc"> <b>Civic distrust between citizens and law enforcement is exarcerbated by police misconduct.</b> Our team designed a full data science pipeline — from EDA to modeling to a decision-support dashboard — to help the Philadelphia Mayor's Office identify which police districts could be targeted for intervention and training. We analyzed 1,300–1,800 annual complaints filed with the Philadelphia Police Department between 2015 and 2019.</p>
-            <p class="pdesc" style="margin-top:-0.5rem;"> <b>Method: </b>Our approach utilized k-means clustering, logistic regression, and random forest models to identify high-risk officers and districts. We also conducted spatial hotspot analysis in ArcGIS, revealing Districts 39 and 25 as statistically significant misconduct hotspots at 99% confidence. Recommendations included! </p>
+            <p class="pdesc" style="margin-top:-0.5rem;"> <b>Methods: </b>Our approach utilized k-means clustering, logistic regression, and random forest models to identify high-risk officers and districts. We also conducted spatial hotspot analysis in ArcGIS, revealing Districts 39 and 25 as statistically significant misconduct hotspots at 99% confidence. Recommendations included! </p>
             <div class="pmeta">Data: <span>OpenDataPhilly · ACS Census · TIGER Shapefiles</span> &nbsp;·&nbsp; Tools: <span>R · ArcGIS · Tableau · scikit-learn</span></div>
             <div class="plinks">
               <a href="https://github.com/kailagilbert/predicting-police-misconduct" class="plink" target="_blank">↗ GitHub</a>
@@ -635,7 +635,7 @@
             </div>
             <h3 class="ptitle">Evaluating Racial Bias in the COMPAS Recidivism Risk System <span style="font-size:0.75em;font-weight:400;color:var(--ink3);font-family:var(--font-body);">(Team)</span></h3>
             <p class="pdesc"> <b>What happens when an algorithm used by government officials consistently reveals discrimination in its recommendations?</b> Our team reproduced and extended ProPublica's landmark investigation into COMPAS — a risk assessment tool used across the U.S. criminal justice system to score individuals' likelihood of reoffending. Using the same Broward County dataset, we built competing models (logistic regression, LDA, KNN, decision trees) to predict both general and violent recidivism.</p>
-            <p class="pdesc" style="margin-top:-0.5rem;"><b>Key Finding:</b> The strongest predictors of recidivism were age, sex, and prior criminal history, not race — yet COMPAS scores diverged sharply by race. Our models achieved similar sensitivity to COMPAS with meaningfully better specificity — and with substantially more equitable outcomes across race. Our pruned random forest model performed best for general recidivism, while our LDA model led on violent recidivism.</p>
+            <p class="pdesc" style="margin-top:-0.5rem;"><b>Key Findings:</b> The strongest predictors of recidivism were age, sex, and prior criminal history, not race — yet COMPAS scores diverged sharply by race. Our models achieved similar sensitivity to COMPAS with meaningfully better specificity — and with substantially more equitable outcomes across race. Our pruned random forest model performed best for general recidivism, while our LDA model led on violent recidivism.</p>
             <div class="pmeta">Dataset: <span>6,172 individuals · Broward County, FL</span> &nbsp;·&nbsp; Models: <span>LR, LDA, KNN, Decision Tree, Random Forest</span></div>
             <div class="plinks">
               <a href="https://github.com/kailagilbert/ProPublica---Recidivism-Risk-Modeling/tree/main" class="plink" target="_blank">↗ GitHub</a>
@@ -681,7 +681,7 @@
             </div>
             <h3 class="ptitle">Discovering Agendas in DOJ Press Releases <span style="font-size:0.75em;font-weight:400;color:var(--ink3);font-family:var(--font-body);">(Team)</span></h3>
             <p class="pdesc"> <b> How do DOJ press releases reveal the ultimate priorities and agendas of an administration?</b> Our team used LDA topic modeling and t-SNE clustering on 13,000 Department of Justice press releases (2009–present) to surface the "expressed agendas" of each Attorney General.</p>
-            <p class="pdesc"> <b>Key Finding</b>Our analysis revealed clear partisan shifts — notably, sharp declines in voting rights and disability cases under the last two AGs — with policy recommendations delivered to the House Judiciary Committee </p>
+            <p class="pdesc"> <b>Key Findings: </b>Our analysis revealed clear partisan shifts — notably, sharp declines in voting rights and disability cases under the last two AGs — with policy recommendations delivered to the House Judiciary Committee </p>
             <div class="pmeta">Corpus: <span>13,000 press releases · 57MB</span> &nbsp;·&nbsp; Topics: <span>10 discovered</span></div>
             <div class="plinks">
               <a href="#" class="plink">↗ GitHub (coming soon)</a>
