@@ -390,7 +390,6 @@
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#education">Education</a></li>
-      <li><a href="writing.html">Writing</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -458,8 +457,7 @@
         <div class="at reveal">
           <p>Hi! I'm <strong>Kaila Gilbert</strong> — a technologist, data scientist, and multi-genre writer who believes wholeheartedly in the power of people. Whether I'm exploring our current world or dreaming up brighter ones, I bring curiosity, depth, and analytical expertise to all that I do.</p>
           <p>As a graduate student in Data Science, I cultivated a deep love for the craft of visualization — the idea that a well-told story with engaging visuals can communicate what a thousand rows of data cannot. I was honored to spend four years at <strong>IBM</strong>, bringing the cutting-edge of AI and data analytics to Federal clients and civilian institutions. Before IBM, I gained experience working with startups, nonprofits, and Fortune 50 companies.</p>
-          <p>My graduate work spanned geospatial analysis, AI/ML, statistical modeling, and policy studies. I also hold a B.S. in Human and Organizational Development, a foundation that puts people and strategy at the heart of all I do.</p>
-          <p>Outside of work, you'll find me reading, travelling, playing D&amp;D, and applying my technical skills to delicious recipes.</p>
+          <p>My graduate work spanned geospatial analysis, AI/ML, statistical modeling, and policy studies. I also hold a B.S. in Human and Organizational Development, a foundation that puts people and strategy at the heart of all I do. Outside of work, you'll find me reading, travelling, playing D&amp;D, and applying my technical skills to delicious recipes.</p>
           <p>I'm currently <strong>open to part-time and consulting opportunities</strong> in data science, analytics, and creative storytelling. If you have a dataset that needs to tell a story, let's make it happen.</p>
           <br/>
           <a href="docs/resume.pdf" class="btn btn-ghost" target="_blank">Download Resume →</a>
@@ -482,7 +480,64 @@
 
       <div class="masonry">
 
-        <!-- FEATURED -->
+        <!-- Project 1 — FEATURED -->
+        <div class="pc reveal">
+          <div class="pi" style="height:260px; background:#1e2a1e; overflow:hidden;">
+            <img src="images/voter-toolkit-ohio.png" alt="Interactive county-level voter risk map for Ohio — color-coded by Recruit Immediately, Recruit, or Monitor action" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          </div>
+          <div class="pb">
+            <div class="ptags">
+              <span class="ptag t">Featured in Press</span>
+              <span class="ptag s">Civic Tech</span>
+              <span class="ptag">Voting Rights</span>
+              <span class="ptag g">CMU · DSSG</span>
+            </div>
+            <h3 class="ptitle">Protecting Voting Access During the Pandemic <span style="font-size:0.75em;font-weight:400;color:var(--ink3);font-family:var(--font-body);">(Team)</span></h3>
+
+            <!-- Press callout -->
+            <div style="background:var(--cream3);border-left:3px solid var(--terra);padding:0.7rem 1rem;margin-bottom:1rem;font-size:0.78rem;line-height:1.6;color:var(--ink2);">
+              📰 <strong>Featured in CMU Heinz College News:</strong> <a href="https://www.heinz.cmu.edu/media/2020/August/keep-the-polls-open-carnegie-mellon-data-scientists-join-national-effort-to-protect-voting-access-during-the-pandemic" target="_blank" style="color:var(--terra);text-decoration:none;border-bottom:1px solid var(--terra-lt);"><em>"Carnegie Mellon Data Scientists Join National Effort to Protect Voting Access During the Pandemic"</em></a>
+            </div>
+
+            <p class="pdesc">Partnered with the nonprofit Voter Protection Corps and CMU professor Rayid Ghani to examine poll closures, voting behavior, and election resource gaps across the U.S. during COVID-19. Gathered and analyzed data from over 35,000 polling places alongside public census and survey sources.</p>
+            <p class="pdesc" style="margin-top:-0.5rem;">Built a Voter Resource Prioritization Toolkit identifying counties with critical gaps between in-person voting demand and available resources — factoring in polling machine access, poll worker shortages, and historically marginalized voter populations. Findings directly informed Voter Protection Corps' national action plan to preserve in-person voting ahead of the 2020 general election.</p>
+            <div class="pmeta">Data: <span>35,000+ polling places · ACS Census · Survey data</span> &nbsp;·&nbsp; Tools: <span>Python · Tableau · Geospatial Analysis</span></div>
+            <div class="plinks">
+              <a href="https://dssg.github.io/voter-protection/" class="plink" target="_blank">↗ Toolkit</a>
+              <a href="docs/poll-worker-brief.pdf" class="plink" target="_blank">↗ Report</a>
+              <a href="https://www.heinz.cmu.edu/media/2020/August/keep-the-polls-open-carnegie-mellon-data-scientists-join-national-effort-to-protect-voting-access-during-the-pandemic" class="plink" target="_blank">↗ Heinz College News</a>
+              <a href="https://www.cmu.edu/ambassadors/october-2020/polls-open.html" class="plink" target="_blank">↗ CMU News</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 — FEATURED -->
+        <div class="pc reveal d1">
+          <div class="pi" style="height:260px;">
+            <img src="images/transit-dashboard.png" alt="ArcGIS dashboard showing transit accessibility to opportunity employment zones in Allegheny County" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          </div>
+          <div class="pb">
+            <div class="ptags">
+              <span class="ptag t">Featured</span>
+              <span class="ptag s">ArcGIS Dashboard</span>
+              <span class="ptag">Transportation Equity</span>
+              <span class="ptag">GIS</span>
+              <span class="ptag g">Public Policy</span>
+            </div>
+            <h3 class="ptitle">Measuring Transit Accessibility to Opportunity Employment in Allegheny County <span style="font-size:0.75em;font-weight:400;color:var(--ink3);font-family:var(--font-body);">(Team)</span></h3>
+            <p class="pdesc">Investigated whether the Port Authority of Allegheny County (PAAC) bus system adequately serves "high needs" populations — those who rely on public transit to access opportunity employment. Identified origin block groups using ACS data filtered by transit dependency, age, and industry, then built an origin-destination composite accessibility index scoring each transit route.</p>
+            <p class="pdesc" style="margin-top:-0.5rem;">Composite scores ranged from <strong style="color:var(--terra)">9.8 to 87</strong> — penalizing long travel times, excessive transfers, and limited off-peak service. Findings revealed stark spatial mismatches between where transit-dependent workers live and where opportunity jobs are located. Final outputs were delivered as an interactive ArcGIS dashboard and an Excel accessibility index used by Allegheny County DHS.</p>
+            <div class="pmeta">Geography: <span>Allegheny County, PA · Block group level</span> &nbsp;·&nbsp; Tools: <span>ArcGIS · Python · Excel · ACS Census</span> &nbsp;·&nbsp; Output: <span>Live dashboard + Accessibility Index</span></div>
+            <div class="plinks">
+              <a href="https://github.com/kailagilbert/transit-accessibility-index" class="plink" target="_blank">↗ GitHub</a>
+              <a href="https://github.com/kailagilbert/transit-accessibility-index/blob/main/Final%20Report%20-%20Transit%20Accessibility.pdf" class="plink" target="_blank">↗ Report</a>
+              <a href="https://github.com/kailagilbert/transit-accessibility-index/blob/main/Final%20Presentation.pdf" class="plink" target="_blank">↗ Slides</a>
+              <a href="https://github.com/kailagilbert/transit-accessibility-index/blob/main/(Sample%20Output)%20AccessibilityIndex_DHS_Final(1).xlsx" class="plink" target="_blank">↗ Sample Output</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 — EPA -->
         <div class="pc reveal">
           <div class="pi" style="height:240px;">
             <img src="images/epa-project.png" alt="Map of hazardous waste facilities across New York State" style="width:100%;height:100%;object-fit:cover;">
@@ -516,33 +571,7 @@
           </div>
         </div>
 
-        <!-- Project 2 — FEATURED -->
-        <div class="pc reveal d1">
-          <div class="pi" style="height:260px;">
-            <img src="images/transit-dashboard.png" alt="ArcGIS dashboard showing transit accessibility to opportunity employment zones in Allegheny County" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
-          </div>
-          <div class="pb">
-            <div class="ptags">
-              <span class="ptag t">Featured</span>
-              <span class="ptag s">ArcGIS Dashboard</span>
-              <span class="ptag">Transportation Equity</span>
-              <span class="ptag">GIS</span>
-              <span class="ptag g">Public Policy</span>
-            </div>
-            <h3 class="ptitle">Measuring Transit Accessibility to Opportunity Employment in Allegheny County <span style="font-size:0.75em;font-weight:400;color:var(--ink3);font-family:var(--font-body);">(Team)</span></h3>
-            <p class="pdesc">Investigated whether the Port Authority of Allegheny County (PAAC) bus system adequately serves "high needs" populations — those who rely on public transit to access opportunity employment. Identified origin block groups using ACS data filtered by transit dependency, age, and industry, then built an origin-destination composite accessibility index scoring each transit route.</p>
-            <p class="pdesc" style="margin-top:-0.5rem;">Composite scores ranged from <strong style="color:var(--terra)">9.8 to 87</strong> — penalizing long travel times, excessive transfers, and limited off-peak service. Findings revealed stark spatial mismatches between where transit-dependent workers live and where opportunity jobs are located. Final outputs were delivered as an interactive ArcGIS dashboard and an Excel accessibility index used by Allegheny County DHS.</p>
-            <div class="pmeta">Geography: <span>Allegheny County, PA · Block group level</span> &nbsp;·&nbsp; Tools: <span>ArcGIS · Python · Excel · ACS Census</span> &nbsp;·&nbsp; Output: <span>Live dashboard + Accessibility Index</span></div>
-            <div class="plinks">
-              <a href="https://github.com/kailagilbert/transit-accessibility-index" class="plink" target="_blank">↗ GitHub</a>
-              <a href="https://github.com/kailagilbert/transit-accessibility-index/blob/main/Final%20Report%20-%20Transit%20Accessibility.pdf" class="plink" target="_blank">↗ Report</a>
-              <a href="https://github.com/kailagilbert/transit-accessibility-index/blob/main/Final%20Presentation.pdf" class="plink" target="_blank">↗ Slides</a>
-              <a href="https://github.com/kailagilbert/transit-accessibility-index/blob/main/(Sample%20Output)%20AccessibilityIndex_DHS_Final(1).xlsx" class="plink" target="_blank">↗ Sample Output</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
+        <!-- Project 4 -->
         <div class="pc reveal">
           <div class="pi" style="height:240px; background:#f0ece6;">
             <img src="images/police-misconduct.png" alt="Complainants by age and race — Philadelphia police misconduct EDA" style="width:100%;height:100%;object-fit:contain;">
@@ -566,7 +595,7 @@
           </div>
         </div>
 
-        <!-- Project 4 — FEATURED -->
+        <!-- Project 5 -->
         <div class="pc reveal">
           <div class="pi" style="height:260px; background:#f5f5f5;">
             <img src="images/food-inspection.png" alt="Feature importance chart for food inspection outcome prediction" style="width:100%;height:100%;object-fit:contain;">
@@ -589,7 +618,7 @@
           </div>
         </div>
 
-        <!-- Project 4 -->
+        <!-- Project 6 -->
         <div class="pc reveal d1">
           <div class="pi" style="height:280px; background:#1a1a1a;">
             <img src="images/compas-project.png" alt="ProPublica Machine Bias — COMPAS racial bias investigation" style="width:100%;height:100%;object-fit:contain;">
@@ -612,7 +641,7 @@
           </div>
         </div>
 
-        <!-- Project 5 -->
+        <!-- Project 7 -->
         <div class="pc reveal">
           <div class="pi" style="height:220px;">
             <img src="images/covid-modeling.jpg" alt="COVID-19 virus illustration — Points of Dispense modeling" style="width:100%;height:100%;object-fit:cover;object-position:center;">
@@ -635,7 +664,7 @@
           </div>
         </div>
 
-        <!-- Project 6 -->
+        <!-- Project 8 -->
         <div class="pc reveal d1">
           <div class="pi">
             <img src="images/doj-project.png" alt="Topic frequency trends across DOJ press releases 2009-2019">
@@ -653,37 +682,6 @@
             <div class="plinks">
               <a href="#" class="plink">↗ GitHub (coming soon)</a>
               <a href="docs/doj-slides.pptx" class="plink" target="_blank">↗ Slides</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 8 -->
-        <div class="pc reveal">
-          <div class="pi" style="height:260px; background:#1e2a1e; overflow:hidden;">
-            <img src="images/voter-toolkit-ohio.png" alt="Interactive county-level voter risk map for Ohio — color-coded by Recruit Immediately, Recruit, or Monitor action" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
-          </div>
-          <div class="pb">
-            <div class="ptags">
-              <span class="ptag t">Featured in Press</span>
-              <span class="ptag s">Civic Tech</span>
-              <span class="ptag">Voting Rights</span>
-              <span class="ptag g">CMU · DSSG</span>
-            </div>
-            <h3 class="ptitle">Protecting Voting Access During the Pandemic <span style="font-size:0.75em;font-weight:400;color:var(--ink3);font-family:var(--font-body);">(Team)</span></h3>
-
-            <!-- Press callout -->
-            <div style="background:var(--cream3);border-left:3px solid var(--terra);padding:0.7rem 1rem;margin-bottom:1rem;font-size:0.78rem;line-height:1.6;color:var(--ink2);">
-              📰 <strong>Featured in CMU Heinz College News:</strong> <a href="https://www.heinz.cmu.edu/media/2020/August/keep-the-polls-open-carnegie-mellon-data-scientists-join-national-effort-to-protect-voting-access-during-the-pandemic" target="_blank" style="color:var(--terra);text-decoration:none;border-bottom:1px solid var(--terra-lt);"><em>"Carnegie Mellon Data Scientists Join National Effort to Protect Voting Access During the Pandemic"</em></a>
-            </div>
-
-            <p class="pdesc">Partnered with the nonprofit Voter Protection Corps and CMU professor Rayid Ghani to examine poll closures, voting behavior, and election resource gaps across the U.S. during COVID-19. Gathered and analyzed data from over 35,000 polling places alongside public census and survey sources.</p>
-            <p class="pdesc" style="margin-top:-0.5rem;">Built a Voter Resource Prioritization Toolkit identifying counties with critical gaps between in-person voting demand and available resources — factoring in polling machine access, poll worker shortages, and historically marginalized voter populations. Findings directly informed Voter Protection Corps' national action plan to preserve in-person voting ahead of the 2020 general election.</p>
-            <div class="pmeta">Data: <span>35,000+ polling places · ACS Census · Survey data</span> &nbsp;·&nbsp; Tools: <span>Python · Tableau · Geospatial Analysis</span></div>
-            <div class="plinks">
-              <a href="https://dssg.github.io/voter-protection/" class="plink" target="_blank">↗ Toolkit</a>
-              <a href="docs/poll-worker-brief.pdf" class="plink" target="_blank">↗ Report</a>
-              <a href="https://www.heinz.cmu.edu/media/2020/August/keep-the-polls-open-carnegie-mellon-data-scientists-join-national-effort-to-protect-voting-access-during-the-pandemic" class="plink" target="_blank">↗ Heinz College News</a>
-              <a href="https://www.cmu.edu/ambassadors/october-2020/polls-open.html" class="plink" target="_blank">↗ CMU News</a>
             </div>
           </div>
         </div>
